@@ -2,7 +2,7 @@
 
 ## Objective
 
-The objective of using this dataset for analysis and creating a dynamic Power BI dashboard is to derive actionable insights into the company's sales and customer preferences.
+The objective of using this dataset for analysis and creating an interactive Power BI dashboard is to derive actionable insights into the company's sales and customer preferences.
 
 ## About the dataset:
 
