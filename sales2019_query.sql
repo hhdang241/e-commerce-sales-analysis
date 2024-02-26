@@ -1,45 +1,22 @@
 USE master;
 
-CREATE SCHEMA sales2019_db;
+-- Nhập dữ liệu từ file
 
--- Tiền xử lý dữ liệu
+CREATE TABLE sales2019 (
+	`Order ID` INT,
+    Product CHAR(100),
+    `Quantity Ordered` SMALLINT,
+    `Price Each` DOUBLE,
+	`Order Date` DATETIME,
+	`Purchase Address` CHAR(100)
+);
 
--- Gộp dữ liệu các tháng lại để xử lý cùng lúc
-
-CREATE TABLE sales2019 LIKE sales2019_db.sales2019_1;
-
-INSERT INTO sales2019
-SELECT * FROM sales2019_db.sales2019_1
-UNION ALL
-SELECT * FROM sales2019_db.sales2019_2
-UNION ALL
-SELECT * FROM sales2019_db.sales2019_3
-UNION ALL
-SELECT * FROM sales2019_db.sales2019_4
-UNION ALL
-SELECT * FROM sales2019_db.sales2019_5
-UNION ALL
-SELECT * FROM sales2019_db.sales2019_6
-UNION ALL
-SELECT * FROM sales2019_db.sales2019_7
-UNION ALL
-SELECT * FROM sales2019_db.sales2019_8
-UNION ALL
-SELECT * FROM sales2019_db.sales2019_9
-UNION ALL
-SELECT * FROM sales2019_db.sales2019_10
-UNION ALL
-SELECT * FROM sales2019_db.sales2019_11
-UNION ALL
-SELECT * FROM sales2019_db.sales2019_12;
-
--- Chuẩn hoá cột Order Date
-
-UPDATE sales2019
-SET `Order Date` = STR_TO_DATE(`Order Date`, '%m/%d/%y %H:%i');
-
-ALTER TABLE sales2019
-MODIFY COLUMN `Order Date` DATETIME;
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/sales2019.csv' 
+INTO TABLE sales2019 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
 
 -- Phân tích dữ liệu
 
@@ -151,8 +128,8 @@ Giả thuyết về lí do các sản phẩm này được bán nhiều nhất:
 - Vậy yếu tố giá cả có ảnh hưởng thế nào đến số lượng bán ra của sản phẩm?
 */
 
-SELECT DISTINCT
-	`Product`,
+SELECT
+	DISTINCT `Product`,
     `Price Each`
 FROM sales2019
 ORDER BY `Price Each`;
@@ -162,4 +139,6 @@ Ta có thể thấy, 2 sản phẩm được bán nhiều nhất lại có giá 
 Cùng với sự cần thiết của sản phẩm Batteries trong đời sống hằng ngày, đây có thể là những lí do khiến AAA Batteries (4-pack) và AA Batteries (4-pack) được bán nhiều nhất
 */
 
-DELETE sales2019;
+-- Xoá table
+
+DROP TABLE sales2019;
