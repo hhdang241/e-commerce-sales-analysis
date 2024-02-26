@@ -4,7 +4,7 @@
 
 The objective of using this dataset for analysis and creating an interactive Power BI dashboard is to derive actionable insights into the company's sales and customer preferences.
 
-You can view the completed interactive dashboard [here]{https://app.powerbi.com/Redirect?action=OpenReport&appId=9ef51210-7f1a-4f86-bd8d-4ebd52d7d77e&reportObjectId=59b45e07-3cce-4beb-a592-1cb283adde25&ctid=40127cd4-45f3-49a3-b05d-315a43a9f033&reportPage=ReportSection&pbi_source=appShareLink&portalSessionId=67987fbd-85c1-4424-a6a9-032588aa3a26}.
+You can view the completed interactive dashboard [here](https://app.powerbi.com/Redirect?action=OpenReport&appId=9ef51210-7f1a-4f86-bd8d-4ebd52d7d77e&reportObjectId=59b45e07-3cce-4beb-a592-1cb283adde25&ctid=40127cd4-45f3-49a3-b05d-315a43a9f033&reportPage=ReportSection&pbi_source=appShareLink&portalSessionId=67987fbd-85c1-4424-a6a9-032588aa3a26).
 
 ## About the dataset:
 
