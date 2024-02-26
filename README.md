@@ -27,3 +27,11 @@ The dataset comprises detailed information about transactions on the company's E
 2. Next, SQL queries were employed to address specific questions regarding sales data.
 
 3. Finally, the dataframes were exported from a CSV file and imported into Power BI for visualization
+
+## Data Insights
+
+- Which month has the highest sales volume? What is the sales figure for that month?
+- Which city has the highest sales volume?
+- At what time frame does the business need to advertise to increase customer purchasing likelihood?
+- Which products are often sold together?
+- Which product sells the most? What is your hypothesis about the reason for this product selling the most?
