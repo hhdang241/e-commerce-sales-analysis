@@ -62,7 +62,7 @@ Giả thuyết về lí do San Francisco có doanh số cao nhất:
 
 SELECT
 	EXTRACT(HOUR FROM `Order Date`) AS `hour`,
-    COUNT(*) AS number_of_orders
+    COUNT(DISTINCT `Order ID`) AS number_of_orders
 FROM sales2019
 GROUP BY EXTRACT(HOUR FROM `Order Date`)
 ORDER BY number_of_orders DESC;
